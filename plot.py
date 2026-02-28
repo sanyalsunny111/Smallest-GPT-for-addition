@@ -65,10 +65,10 @@ ax.fill_between(steps_k, mean_s - std_s, mean_s + std_s,
 # Big yellowish-brown star at the start point
 ax.scatter(steps_k[0], mean_s[0], marker='*', s=600, color='#B8860B', zorder=5)
 ax.annotate('Pre-trained', xy=(steps_k[0], mean_s[0]),
-            xytext=(steps_k[0] + 1.5, mean_s[0]),
-            fontsize=14, color='#B8860B', va='center', fontweight='bold')
+            xytext=(steps_k[0] + 3.0, mean_s[0]),
+            fontsize=16, color='black', va='center', fontweight='bold')
 
-ax.set_title('ToyGPT 10 Digit Addition  — 5 Seeds', fontsize=16)
+ax.set_title('GPT (296 Params) Two 10 Digit Addition  — 5 Seeds', fontsize=16)
 ax.set_xlabel('Steps (in K)', fontsize=20)
 ax.set_ylabel('Test Seq Accuracy', fontsize=20)
 ax.grid(True, linestyle='--', alpha=0.5)
@@ -80,7 +80,7 @@ legend = ax.legend(fontsize=18, loc='lower right')
 
 # Separate box above legend for best acc
 from matplotlib.patches import FancyBboxPatch
-ax.annotate(f'Best Test Seq: {best_overall:.4f}',
+ax.annotate(f'Best Accuracy (Test Seq): {best_overall:.4f}',
             xy=(1, 0), xycoords='axes fraction',
             xytext=(-10, 10 + legend.get_window_extent(fig.canvas.get_renderer()).height),
             textcoords='offset points',

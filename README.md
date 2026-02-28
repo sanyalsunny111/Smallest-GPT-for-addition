@@ -1,4 +1,7 @@
-# Curriculum Pretraining Enables 10-Digit Addition in a 296-Parameter GPT
+# Curriculum Pretraining Enables 10-Digit Addition for a 296-Parameter GPT with 99% Accuracy
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Blog](https://img.shields.io/badge/Blog-post-blue.svg)](https://sanyalsunny111.github.io/posts/2026-02-27-smallest-gpt-for-addition/)
 
 A 296-parameter GPT model trained to perform digit-wise addition of two 10-digit numbers. The training follows a two-stage recipe: curriculum-style pre-training on variable-length addition (2–10 digits), followed by fine-tuning on fixed 10-digit addition with Latest Weight Averaging (LAWA).
 
@@ -87,7 +90,6 @@ python toyGPT_pretrain.py
 # Stage 2: fine-tune on 10-digit addition (run per seed)
 python toyGPT_addition.py --seed 0
 python toyGPT_addition.py --seed 42
-Or run all seeds in one go:
 
 # run all at once
 bash run.sh
@@ -97,15 +99,18 @@ bash run.sh
 
 ## Contribution Statement
 
-Sunny Sanyal conceived the idea of curriculum-based pretraining combined with LAWA (Latest Weight Averaging) during fine-tuning, and ran all experiments himself. Claude wrote all code. 
-Its suggested solutions were primarily architectural modifications, while the final approach focused on training-recipe changes rather than altering the model architecture.
+Sunny Sanyal conceived the idea of curriculum-based pretraining combined with LAWA (Latest Weight Averaging) during fine-tuning, and ran all experiments himself. Claude wrote all the code and also helped in writing the Readme. 
+Claude's suggested solutions were primarily architecture modifications, while the final approach focused on training-recipe changes rather than altering the model architecture.
 
 ## Citation
 
 ```bibtex
-@misc{toyGPT_curriculum_pre-training_2026,
+@misc{sanyal2026AdditionGPT,
   author       = {Sunny Sanyal},
-  title        = {Curriculum Pretraining Enables 10-Digit Addition in a 296-Parameter GPT},
+  title        = {Curriculum Pretraining Enables 10-Digit Addition for a 296-Parameter GPT with 99% Accuracy},
   year         = {2026},
   note         = {Blog},
+  url          = {https://sanyalsunny111.github.io/posts/2026-02-27-smallest-gpt-for-addition/}
 }
+```
+
